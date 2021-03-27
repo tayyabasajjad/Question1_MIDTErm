@@ -11,10 +11,11 @@ package swingjtable;
  */
 public class ChildFrame extends javax.swing.JInternalFrame {
 
-   StudentTableModel studentTableModel=new StudentTableModel();
-   
+    StudentTableModel studentTableModel = new StudentTableModel();
+
     public ChildFrame() {
         initComponents();
+
     }
 
     /**
@@ -42,6 +43,7 @@ public class ChildFrame extends javax.swing.JInternalFrame {
 
         jTextField2.setText("jTextField2");
 
+        studentTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         studentTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -53,6 +55,7 @@ public class ChildFrame extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        studentTable.setRowHeight(20);
         jScrollPane1.setViewportView(studentTable);
 
         btnLoadData.setText("Load Data");
@@ -107,7 +110,7 @@ public class ChildFrame extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoadDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadDataActionPerformed
-studentTableModel.populateTable();
+        studentTableModel.populateTable();
         studentTable.setModel(studentTableModel);
     }//GEN-LAST:event_btnLoadDataActionPerformed
 

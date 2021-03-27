@@ -27,7 +27,7 @@ public class MainMDIFrame extends javax.swing.JFrame {
         this.setSize(screenSize.width, screenSize.height);
         
         mainPane.setBounds(this.getBounds());
-        //setTitle("My Project");
+        setTitle("My Project");
         
         setVisible(true);
     }
